@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>moviecave</title>
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <button class="btn">Home</button>
+      <form class="form">
+        <input
+          class="search-input"
+          type="text"
+          name="search-text"
+          placeholder="Search"
+          required
+        />
+        <button type="submit" class="submit-btn">
+          <img
+            class="submit-icon"
+            src="https://img.icons8.com/?size=100&id=132&format=png&color=950000"
+            alt="submit button"
+          />
+        </button>
+      </form>
+      <button class="btn">My watchlist</button>
+    </div>
+    <div class="info-container">
+      <p class="hero-title"></p>
+      <p class="hero-overview"></p>
+
+      <div class="info-movie-container">
+        <div class="hero-container">
+          <div class="genres-container"></div>
+          <div class="hero-info">
+            <p class="hero-vote"></p>
+            <p class="hero-duration"></p>
+          </div>
+        </div>
+        <button class="add-btn">
+          <img
+            class="add-btn-icon"
+            src="./src/assets/add_btn.svg"
+            alt="add to watchlist icon"
+          />
+          Add to watchlist
+        </button>
+        <button class="trailer-btn">
+          <img
+            class="trailer-btn-icon"
+            src="./src/assets/trailer.svg"
+            alt="watch trailer btn icon"
+          />
+          Watch Trailer
+        </button>
+      </div>
+    </div>
+
+    <div class="gallery-wrapper">
+      <div class="gallery-mask"><ul class="gallery"></ul></div>
+
+      <div class="gallery-btn-container">
+        <button class="preview-btn">
+          <img src="./src/assets/preview-btn.svg" alt="Preview button" />
+        </button>
+        <button class="next-btn">
+          <img src="./src/assets/next-btn.svg" alt="Next button" />
+        </button>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
