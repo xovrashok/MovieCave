@@ -36,20 +36,21 @@ body {
   margin-top: 50px;
 }
 
-.btn {
+.back-link,
+.btn-my-watchlist {
   font-size: 24px;
-  border: none;
-  padding: 10px 15px;
-  border: 1.5px solid var(--primary-color);
-  border-radius: 3px;
+  border: 1.5px solid transparent;
+  padding: 10px 2px;
   background-color: transparent;
   color: var(--white);
   cursor: pointer;
-  transition: all 0.4s ease;
+  transition: all 0.3s ease;
+  text-decoration: none;
 }
 
-.btn:hover {
-  transform: scale(1.1);
+.back-link:hover,
+.btn-my-watchlist:hover {
+  border-bottom: 1.5px solid var(--primary-color);
 }
 
 form {
@@ -204,6 +205,15 @@ form {
   border-bottom: 1px solid var(--primary-color);
   padding: 10px;
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.add-btn:hover {
+  border-bottom: 1px solid #4b0000;
+}
+
+.add-to-watchlist {
+  display: none;
 }
 
 .trailer-btn {
@@ -217,6 +227,11 @@ form {
   font-size: 15px;
   font-weight: 600;
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.trailer-btn:hover {
+  border: 1.5px solid #4b0000;
 }
 
 .genre-badge {
@@ -240,4 +255,15 @@ form {
   background-color: transparent;
   padding: 0;
   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column-reverse;
+    gap: 15px;
+  }
+
+  .back-link {
+    display: none;
+  }
 }
