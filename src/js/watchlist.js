@@ -1,4 +1,5 @@
 import { getWatchlist } from "./storage";
+import crossBtnIcon from "../assets/cross.png";
 
 const watchlistContainer = document.querySelector(".watchlist-container");
 const loadMoreBtn = document.querySelector(".load-more");
@@ -7,7 +8,7 @@ let currentPage = 1;
 
 function updateBackground() {
   if (items.length > 0 && items[0][3]) {
-    const bgUrl = `url(https://image.tmdb.org/t/p/w1280${items[0][3]})`; // w1280 лучше для фона
+    const bgUrl = `url(https://image.tmdb.org/t/p/w1280${items[0][3]})`;
     document.body.style.setProperty("--bg-image", bgUrl);
   } else {
     document.body.style.setProperty("--bg-image", "none");
@@ -30,7 +31,7 @@ function renderWatchlist() {
       return `
         <div class="movie-info">
           <button class="btn-delete" data-id="${item[0]}">
-            <img src="/src/assets/cross.png" alt="delete icon" />
+            <img src="${crossBtnIcon}" alt="delete icon" />
           </button>
           <img class="movie-poster" src="${img}" alt="${item[1]}" />
           <p class="movie-title">${item[1]} (${item[2]})</p>
