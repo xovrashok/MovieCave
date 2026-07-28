@@ -33,11 +33,11 @@ export function displayMovieDetails(details) {
 
 export function updateWatchlistButton(btnElement, isAdded) {
   if (isAdded === true) {
-    btnElement.innerHTML = `<img class="add-btn-icon" src="./src/assets/watchlist-added.svg" alt="added to watchlist icon" /> Watchlist added`;
+    btnElement.innerHTML = `<img class="add-btn-icon" src="/src/assets/watchlist-added.svg" alt="added to watchlist icon" /> Watchlist added`;
     btnElement.disabled = true;
     btnElement.style.cursor = "not-allowed";
   } else {
-    btnElement.innerHTML = `<img class="add-btn-icon" src="./src/assets/add_btn.svg" alt="add to watchlist icon" /> Add to watchlist`;
+    btnElement.innerHTML = `<img class="add-btn-icon" src="/src/assets/add_btn.svg" alt="add to watchlist icon" /> Add to watchlist`;
     btnElement.disabled = false;
     btnElement.style.cursor = "pointer";
   }
