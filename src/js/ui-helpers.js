@@ -1,3 +1,6 @@
+import addBtnIcon from "../assets/add_btn.svg";
+import addedBtnIcon from "../assets/watchlist-added.svg";
+
 const heroTitle = document.querySelector(".hero-title");
 const heroOverview = document.querySelector(".hero-overview");
 const heroVote = document.querySelector(".hero-vote");
@@ -33,11 +36,11 @@ export function displayMovieDetails(details) {
 
 export function updateWatchlistButton(btnElement, isAdded) {
   if (isAdded === true) {
-    btnElement.innerHTML = `<img class="add-btn-icon" src="/src/assets/watchlist-added.svg" alt="added to watchlist icon" /> Watchlist added`;
+    btnElement.innerHTML = `<img class="add-btn-icon" src="${addedBtnIcon}" alt="added to watchlist icon" /> Watchlist added`;
     btnElement.disabled = true;
     btnElement.style.cursor = "not-allowed";
   } else {
-    btnElement.innerHTML = `<img class="add-btn-icon" src="https://img.icons8.com/?size=100&id=24717&format=png&color=000000" alt="add to watchlist icon" /> Add to watchlist`;
+    btnElement.innerHTML = `<img class="add-btn-icon" src="${addBtnIcon}" alt="add to watchlist icon" /> Add to watchlist`;
     btnElement.disabled = false;
     btnElement.style.cursor = "pointer";
   }
