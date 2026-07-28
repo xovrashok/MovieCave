@@ -37,7 +37,7 @@ export function updateWatchlistButton(btnElement, isAdded) {
     btnElement.disabled = true;
     btnElement.style.cursor = "not-allowed";
   } else {
-    btnElement.innerHTML = `<img class="add-btn-icon" src="/src/assets/add_btn.svg" alt="add to watchlist icon" /> Add to watchlist`;
+    btnElement.innerHTML = `<img class="add-btn-icon" src="https://img.icons8.com/?size=100&id=24717&format=png&color=000000" alt="add to watchlist icon" /> Add to watchlist`;
     btnElement.disabled = false;
     btnElement.style.cursor = "pointer";
   }
